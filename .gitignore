@@ -1,0 +1,7 @@
+# FOLDERS
+__pycache__
+env
+
+# FILES
+*.xml
+*.pdf
