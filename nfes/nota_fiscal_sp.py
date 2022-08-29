@@ -106,13 +106,18 @@ class NotaFiscalSP:
     def compose_service_provider_data(self) -> None:
         '''Solved
         '''
+        sp_city = self.nfes_data[15]
+
+        if 'SA0' in sp_city:
+            sp_city = sp_city.replace('SA0', 'São')
+
         address = {
             'TipoLogradouro': self.nfes_data[9],
             'Logradouro': self.nfes_data[10],
             'NumeroEndereco': self.nfes_data[11],
             'ComplementoEndereco': self.nfes_data[12],
             'Bairro': self.nfes_data[13],
-            'Cidade': self.nfes_data[15],
+            'Cidade': sp_city,
             'UF': self.nfes_data[16],
             'CEP': self.nfes_data[14]
         }
