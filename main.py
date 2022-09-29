@@ -5,10 +5,7 @@ import re
 from nfes.nota_fiscal_sp import NotaFiscalSP
 
 
-files = [
-    'ref_2022_07_nfes_00000003_npbr.pdf',
-    'ref_2022_08_nfes_00000004_npbr.pdf'
-]
+files = []
 
 for index, pdf_path in enumerate(files):
     nfes = NotaFiscalSP(pdf_path=pdf_path)
